@@ -1,12 +1,21 @@
 ##此项目为gin框架接口练习
+
 #安装golang
+
 配置环境
+
 ----------------
+
 ##创建数据库
+
 `数据库名blog   编码为utf8_general_ci`
+
 ###在数据库下
+
 创建表
+
 ####1，标签表
+
 `CREATE TABLE `blog_tag` (
    `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
    `name` varchar(100) DEFAULT '' COMMENT '标签名称',
@@ -17,7 +26,9 @@
    `state` tinyint(3) unsigned DEFAULT '1' COMMENT '状态 0为禁用、1为启用',
    PRIMARY KEY (`id`)
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='文章标签管理';`
+ 
  ####2,文章表
+ 
 `CREATE TABLE `blog_article` (
    `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
    `tag_id` int(10) unsigned DEFAULT '0' COMMENT '标签ID',
@@ -31,7 +42,9 @@
    `state` tinyint(3) unsigned DEFAULT '1' COMMENT '状态 0为禁用1为启用',
    PRIMARY KEY (`id`)
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='文章管理';`
+ 
  ####3，认证表
+ 
  `CREATE TABLE `blog_auth` (
     `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
     `username` varchar(50) DEFAULT '' COMMENT '账号',
@@ -40,19 +53,33 @@
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
   INSERT INTO `blog`.`blog_auth` (`id`, `username`, `password`) VALUES (null, 'test', 'test123456');`
   
+
 ##安装govendor
+
 `go get -u github.com/kardianos/govendor`
+
 ##安装gin
+
 `go get -u github.com/kardianos/govendor`
+
 ##拉取go-ini/ini的依赖包
+
 `go get -u github.com/go-ini/ini`
+
 ##拉取com的依赖包
+
 `go get -u github.com/Unknwon/com`
+
 ##拉取gorm的依赖包
+
 `go get -u github.com/jinzhu/gorm`
+
 ##拉取mysql驱动的依赖包
+
 `go get -u github.com/go-sql-driver/mysql`
+
 ##拉取validation的依赖包
+
 `go get -u github.com/astaxie/beego/validation`
 
 
