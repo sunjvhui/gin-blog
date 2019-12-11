@@ -1,9 +1,11 @@
 package routers
+
 import (
-	"gin-blog/routers/api/v1"
 	"github.com/gin-gonic/gin"
-	"gin-blog/pkg/setting"
+	"github.com/sunjvhui/gin-blog/pkg/setting"
+	"github.com/sunjvhui/gin-blog/routers/api/v1"
 )
+
 func InitRouter() *gin.Engine {
 	r := gin.New()
 

@@ -1,8 +1,8 @@
 package util
 
 import (
-	"gin-blog/pkg/setting"
 	jwt "github.com/dgrijalva/jwt-go"
+	"github.com/sunjvhui/gin-blog/pkg/setting"
 	"time"
 )
 
@@ -21,9 +21,9 @@ func GenerateToken(username, password string) (string, error) {
 	claims := Claims{
 		username,
 		password,
-		jwt.StandardClaims {
-			ExpiresAt : expireTime.Unix(),
-			Issuer : "gin-blog",
+		jwt.StandardClaims{
+			ExpiresAt: expireTime.Unix(),
+			Issuer:    "gin-blog",
 		},
 	}
 

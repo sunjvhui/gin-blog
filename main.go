@@ -1,10 +1,12 @@
 package main
+
 import (
 	"fmt"
+	"github.com/sunjvhui/gin-blog/pkg/setting"
+	"github.com/sunjvhui/gin-blog/routers"
 	"net/http"
-	"gin-blog/routers"
-	"gin-blog/pkg/setting"
 )
+
 func main() {
 	router := routers.InitRouter()
 	s := &http.Server{

@@ -54,34 +54,10 @@
   INSERT INTO `blog`.`blog_auth` (`id`, `username`, `password`) VALUES (null, 'test', 'test123456');`
   
 
-## 安装govendor
-
-`go get -u github.com/kardianos/govendor`
-
-## 安装gin
-
-`go get -u github.com/kardianos/govendor`
-
-## 拉取go-ini/ini的依赖包
-
-`go get -u github.com/go-ini/ini`
-
-## 拉取com的依赖包
-
-`go get -u github.com/Unknwon/com`
-
-## 拉取gorm的依赖包
-
-`go get -u github.com/jinzhu/gorm`
-
-## 拉取mysql驱动的依赖包
-
-`go get -u github.com/go-sql-driver/mysql`
-
-## 拉取validation的依赖包
-
-`go get -u github.com/astaxie/beego/validation`
-
+## 拉取代码
+```
+go build
+```
 
 
 # 验证功能
